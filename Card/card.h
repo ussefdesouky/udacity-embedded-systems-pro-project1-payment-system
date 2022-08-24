@@ -37,6 +37,7 @@ uint8_t arrLenght(const char *arr, uint8_t maxLenght){
     }
     printf("%d \n", arrSize);
     printf("%s \n", arr);
+    printf("------------------------------- \n");
     return arrSize;
 }
 

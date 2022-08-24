@@ -8,7 +8,10 @@ Testing the application
     Invalid card user story
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+
+typedef unsigned short int uint8_t;
 
 int main(){
 
