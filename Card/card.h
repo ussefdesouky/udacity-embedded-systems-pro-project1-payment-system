@@ -23,6 +23,11 @@ typedef struct ST_cardData_t
     uint8_t cardExpirationDate[6];
 }ST_cardData_t;
 
+uint8_t arrLenght(const char *arr, uint8_t maxLenght);
+EN_cardError_t getCardHolderName(ST_cardData_t *cardData);
+EN_cardError_t getCardExpiryDate(ST_cardData_t *cardData);
+EN_cardError_t getCardPAN(ST_cardData_t *cardData);
+
 uint8_t arrLenght(const char *arr, uint8_t maxLenght){
     uint8_t arrSize = 0;
     for(int i = 0; i < maxLenght; i++){
@@ -31,12 +36,9 @@ uint8_t arrLenght(const char *arr, uint8_t maxLenght){
         }
     }
     printf("%d \n", arrSize);
+    printf("%s \n", arr);
     return arrSize;
 }
-
-EN_cardError_t getCardHolderName(ST_cardData_t *cardData);
-EN_cardError_t getCardExpiryDate(ST_cardData_t *cardData);
-EN_cardError_t getCardPAN(ST_cardData_t *cardData);
 
 EN_cardError_t getCardHolderName(ST_cardData_t *cardData){
     uint8_t arrSize = arrLenght((*cardData).cardHolderName, sizeof((*cardData).cardHolderName));
