@@ -29,16 +29,16 @@ EN_cardError_t getCardExpiryDate(ST_cardData_t *cardData);
 EN_cardError_t getCardPAN(ST_cardData_t *cardData);
 
 uint8_t arrLenght(const char *arr, uint8_t maxLenght){
-    uint8_t arrSize = 0;
+    uint8_t arrLen = 0;
     for(int i = 0; i < maxLenght; i++){
         if(arr[i] != 0){
-            arrSize++;
+            arrLen++;
         }
     }
-    printf("%d \n", arrSize);
+    printf("%d \n", arrLen);
     printf("%s \n", arr);
     printf("------------------------------- \n");
-    return arrSize;
+    return arrLen;
 }
 
 EN_cardError_t getCardHolderName(ST_cardData_t *cardData){
