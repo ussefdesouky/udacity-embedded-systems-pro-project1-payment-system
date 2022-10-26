@@ -7,6 +7,11 @@ Implement the application
 #ifndef MY_HEADER_FILE_H
 #define MY_HEADER_FILE_H
 
+#include "../card/card.h"
+#include "../terminal/terminal.h"
+#include "../server/server.h"
+
 // Code body for header file
+void appStart();
 
 #endif
